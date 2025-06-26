@@ -1,0 +1,6 @@
+[ 2025-06-26 21:28:09,769 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-26 21:28:09,774 ] 107 dagshub - INFO - Accessing as netra200021kcbdr
+[ 2025-06-26 21:28:09,977 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/netra200021kcbdr/Network-Security "HTTP/1.1 200 OK"
+[ 2025-06-26 21:28:10,126 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-26 21:28:10,130 ] 107 dagshub - INFO - Initialized MLflow to track repo "netra200021kcbdr/Network-Security"
+[ 2025-06-26 21:28:10,131 ] 107 dagshub - INFO - Repository netra200021kcbdr/Network-Security initialized!
