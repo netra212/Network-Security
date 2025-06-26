@@ -3,6 +3,8 @@ The setup.py file is an essential part of packaging and distributing Python Proj
 '''
 from setuptools import find_packages, setup
 from typing import List
+import warnings
+warnings.filterwarnings("ignore", message=".*distutils.*")
 
 def get_requirements() -> List[str]:
     """

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/user/Desktop/Network-Security/mlruns/0/50425d172155408cb5f16b842ffbf9fa/artifacts
+end_time: 1750947645433
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 50425d172155408cb5f16b842ffbf9fa
+run_name: bold-dolphin-850
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750947643742
+status: 3
+tags: []
+user_id: user

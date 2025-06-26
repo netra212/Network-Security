@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/user/Desktop/Network-Security/mlruns/0/bea9a2f4d79e49a2b2b51cb08019e3a3/artifacts
+end_time: 1750947909650
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bea9a2f4d79e49a2b2b51cb08019e3a3
+run_name: glamorous-vole-286
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750947908246
+status: 3
+tags: []
+user_id: user

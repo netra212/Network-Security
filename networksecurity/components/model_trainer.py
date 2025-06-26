@@ -22,6 +22,9 @@ from sklearn.ensemble import (
     RandomForestClassifier,
 )
 import mlflow
+import dagshub
+
+dagshub.init(repo_owner='netra200021kcbdr', repo_name='Network-Security', mlflow=True)
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
@@ -40,8 +43,8 @@ class ModelTrainer:
             mlflow.log_metric("f1_score", f1_score)
             mlflow.log_metric("precision", precision_score)
             mlflow.log_metric("recall_score", recall_score)
-            mlflow.sklearn.log_model(best_model, "model")
-
+            # mlflow.sklearn.log_model(best_model, "model")
+            mlflow.sklearn.log_model(sk_model=best_model, artifact_path="model")
 
     def train_model(self,X_train,y_train,x_test,y_test):
         models = {
@@ -91,7 +94,7 @@ class ModelTrainer:
         ]
         best_model = models[best_model_name]
 
-        y_train_pred=best_model.predict(X_train)
+        y_train_pred = best_model.predict(X_train)
 
         classification_train_metric = get_classification_score(y_true = y_train,y_pred = y_train_pred)
 
@@ -103,7 +106,7 @@ class ModelTrainer:
         classification_test_metric = get_classification_score(y_true = y_test,y_pred = y_test_pred)
 
         self.track_mlflow(best_model,classification_test_metric)
-        
+
         preprocessor = load_object(file_path=self.data_transformation_artifact.transformed_object_file_path)
         
         model_dir_path = os.path.dirname(self.model_trainer_config.trained_model_file_path)
@@ -130,7 +133,7 @@ class ModelTrainer:
             train_file_path = self.data_transformation_artifact.transformed_train_file_path
             test_file_path = self.data_transformation_artifact.transformed_test_file_path
 
-            #loading training array and testing array
+            # Loading training array and testing array
             train_arr = load_numpy_array_data(train_file_path)
             test_arr = load_numpy_array_data(test_file_path)
 

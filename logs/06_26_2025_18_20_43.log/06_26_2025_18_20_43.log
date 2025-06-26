@@ -1,0 +1,54 @@
+[ 2025-06-26 18:20:44,945 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-26 18:20:44,950 ] 107 dagshub - INFO - Accessing as netra200021kcbdr
+[ 2025-06-26 18:20:45,131 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/netra200021kcbdr/Network-Security "HTTP/1.1 200 OK"
+[ 2025-06-26 18:20:45,282 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-26 18:20:45,285 ] 107 dagshub - INFO - Initialized MLflow to track repo "netra200021kcbdr/Network-Security"
+[ 2025-06-26 18:20:45,286 ] 107 dagshub - INFO - Repository netra200021kcbdr/Network-Security initialized!
+[ 2025-06-26 18:21:21,174 ] 37 root - INFO - Start data Ingestion
+[ 2025-06-26 18:21:22,238 ] 65 root - INFO - Performed train test split on the dataframe
+[ 2025-06-26 18:21:22,238 ] 67 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-06-26 18:21:22,238 ] 75 root - INFO - Exporting train and test file path.
+[ 2025-06-26 18:21:22,270 ] 84 root - INFO - Exported train and test file path.
+[ 2025-06-26 18:21:22,270 ] 40 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts/06_26_2025_18_20_43/data_ingestion/ingested/train.csv', test_file_path='Artifacts/06_26_2025_18_20_43/data_ingestion/ingested/test.csv')
+[ 2025-06-26 18:21:22,272 ] 50 root - INFO - Initiate the data Validation
+[ 2025-06-26 18:21:22,281 ] 31 root - INFO - Required number of columns:2
+[ 2025-06-26 18:21:22,281 ] 32 root - INFO - Data frame has columns:31
+[ 2025-06-26 18:21:22,281 ] 31 root - INFO - Required number of columns:2
+[ 2025-06-26 18:21:22,281 ] 32 root - INFO - Data frame has columns:31
+[ 2025-06-26 18:21:22,366 ] 61 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2025-06-26 18:21:22,366 ] 63 root - INFO - Starting data transformation
+[ 2025-06-26 18:21:22,375 ] 47 root - INFO - Entered get_data_trnasformer_object method of Transformation class
+[ 2025-06-26 18:21:22,375 ] 52 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-06-26 18:21:22,378 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:21:22,379 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:21:22,379 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:21:22,380 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:23:26,210 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:23:26,211 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:23:26,211 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:23:26,221 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:23:26,221 ] 127 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/06_26_2025_18_20_43/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9919710959454034, precision_score=0.9885977195439087, recall_score=0.9953675730110776), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9713574097135741, precision_score=0.961380443714051, recall_score=0.9815436241610739))
+[ 2025-06-26 18:25:18,650 ] 37 root - INFO - Start data Ingestion
+[ 2025-06-26 18:25:19,811 ] 65 root - INFO - Performed train test split on the dataframe
+[ 2025-06-26 18:25:19,811 ] 67 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-06-26 18:25:19,811 ] 75 root - INFO - Exporting train and test file path.
+[ 2025-06-26 18:25:19,844 ] 84 root - INFO - Exported train and test file path.
+[ 2025-06-26 18:25:19,844 ] 40 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts/06_26_2025_18_20_43/data_ingestion/ingested/train.csv', test_file_path='Artifacts/06_26_2025_18_20_43/data_ingestion/ingested/test.csv')
+[ 2025-06-26 18:25:19,846 ] 50 root - INFO - Initiate the data Validation
+[ 2025-06-26 18:25:19,855 ] 31 root - INFO - Required number of columns:2
+[ 2025-06-26 18:25:19,855 ] 32 root - INFO - Data frame has columns:31
+[ 2025-06-26 18:25:19,855 ] 31 root - INFO - Required number of columns:2
+[ 2025-06-26 18:25:19,855 ] 32 root - INFO - Data frame has columns:31
+[ 2025-06-26 18:25:19,947 ] 61 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2025-06-26 18:25:19,947 ] 63 root - INFO - Starting data transformation
+[ 2025-06-26 18:25:19,956 ] 47 root - INFO - Entered get_data_trnasformer_object method of Transformation class
+[ 2025-06-26 18:25:19,956 ] 52 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-06-26 18:25:19,960 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:25:19,961 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:25:19,961 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:25:19,962 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:27:22,088 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:27:22,090 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:27:22,090 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-06-26 18:27:22,108 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-06-26 18:27:22,108 ] 127 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/06_26_2025_18_20_43/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9920274497931174, precision_score=0.9885358004827032, recall_score=0.9955438525420296), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9706840390879479, precision_score=0.9644012944983819, recall_score=0.9770491803278688))
