@@ -51,51 +51,46 @@ A robust and production-ready machine learning pipeline designed to detect **phi
 
 ---
 
-### ✅ Model Performance Summary
+## ✅ Model Performance Summary
 
-Metric	          Training Set	        Test Set
-F1 Score	        0.9909	             0.9747
-Precision	        0.9896	             0.9728
-Recall	            0.9922	             0.9767
+| Metric       | Training Set | Test Set  |
+|--------------|--------------|-----------|
+| F1 Score     | `0.9909`     | `0.9747`  |
+| Precision    | `0.9896`     | `0.9728`  |
+| Recall       | `0.9922`     | `0.9767`  |
 
-> 🔍 Model shows excellent generalization and robustness with very minor performance drop between train and test datasets.
-
----
-
-### ⚙️ Key Technologies Used
-
-Category	                Tools & Technologies
-
-Programming Language	        Python 3.10
-ML Libraries	                scikit-learn, pandas, NumPy
-Imputation Technique	        KNNImputer (n_neighbors=3)
-Model Tracking	                MLflow (integrated with DagsHub)
-Cloud Storage	                AWS S3 (via s3_syncer.py)
-Logging	                        Python logging module with centralized custom logs
-Containerization	            Docker
-CI/CD	                        GitHub Actions (.github/workflows/main.yaml)
-Web API / UI	                FastAPI or Streamlit (app.py)
-Project Structure	            Modular Python package with reusable components
+> 🔍 Model shows excellent generalization with minimal overfitting. Performance remains consistently high across both training and testing datasets.
 
 ---
 
-### 🔁 Training & Evaluation Pipeline
+## ⚙️ Key Technologies Used
 
-Pipeline Stage	                Description
+| Category             | Tools & Technologies                                                   |
+|----------------------|------------------------------------------------------------------------|
+| Programming Language | Python 3.10                                                            |
+| ML Libraries         | scikit-learn, pandas, NumPy                                            |
+| Imputation Technique | KNNImputer (`n_neighbors=3`)                                           |
+| Model Tracking       | MLflow (integrated with DagsHub)                                       |
+| Cloud Storage        | AWS S3 (via `s3_syncer.py`)                                            |
+| Logging              | Python `logging` module with custom handlers                           |
+| Containerization     | Docker                                                                 |
+| CI/CD                | GitHub Actions (`.github/workflows/main.yaml`)                         |
+| Web API / UI         | FastAPI or Streamlit (`app.py`)                                        |
+| Project Structure    | Modular Python package with reusable components                        |
 
-1. Data Ingestion	            Loads raw dataset, splits into train/test, and saves to artifact directory.
+---
 
-2. Validation	                Validates schema and column consistency (handles mismatches gracefully).
+## 🔁 Training & Evaluation Pipeline
 
-3. Transformation	            Applies KNNImputer, feature engineering, and serializes transformers.
-
-4. Model Training	            Trains classification model using scikit-learn.
-
-5. Evaluation	                Calculates metrics (F1, precision, recall) on both train and test datasets.
-
-6. Artifact                     Logging	Stores model, transformer, and metric artifacts with time-stamped paths.
-
-7. Experiment Tracking	        Logs everything to MLflow and DagsHub for versioning and comparison.
+| Pipeline Stage        | Description                                                                 |
+|------------------------|----------------------------------------------------------------------------|
+| **1. Data Ingestion**  | Loads raw dataset, performs train/test split, saves to artifact directory. |
+| **2. Validation**      | Validates schema and checks required columns; handles mismatches.          |
+| **3. Transformation**  | Applies `KNNImputer`, feature scaling, and saves transformation objects.   |
+| **4. Model Training**  | Trains classification model using scikit-learn.                            |
+| **5. Evaluation**      | Computes F1, Precision, Recall on both train and test datasets.            |
+| **6. Artifact Logging**| Saves models, transformers, and metrics with timestamps in artifacts path. |
+| **7. Experiment Tracking** | Uses MLflow to log parameters, metrics, and artifacts via DagsHub.     |
 
 ---
 
