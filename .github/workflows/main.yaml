@@ -50,16 +50,21 @@ jobs:
           id: login-ecr
           uses: aws-actions/amazon-ecr-login@v1
 
-        - name: Build, tag, and push image to Amazon ECR
+        - name: Build and push Docker image to Amazon ECR
           id: build-image
           env:
             ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-            ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
+            ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}  # MUST BE DEFINED
             IMAGE_TAG: latest
           run: |
             echo "🚀 Registry: $ECR_REGISTRY"
             echo "📦 Repo: $ECR_REPOSITORY"
             echo "🏷️  Tag: $IMAGE_TAG"
+
+            if [ -z "$ECR_REPOSITORY" ]; then
+              echo "❌ ECR_REPOSITORY is empty. Please set the secret 'ECR_REPOSITORY_NAME' in GitHub."
+              exit 1
+            fi
 
             docker buildx build \
               --platform linux/amd64 \
