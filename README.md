@@ -97,10 +97,13 @@ A robust and production-ready machine learning pipeline designed to detect **phi
 ### 🧪 How to Reproduce
 
 1. Install Dependencies
+
     ```pip install -r requirements.txt```
 
-2. Run Training Pipeline
+3. Run Training Pipeline
+
     ```python Main.py```
 
-3. Launch API / Web App
+5. Launch API / Web App
+
     ```python app.py```
